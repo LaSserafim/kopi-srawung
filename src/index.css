@@ -3,28 +3,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream-50: #FDFBF7;
-  --color-cream-100: #FAF6EE;
-  --color-cream-200: #F5EFE0;
-  --color-cream-300: #EFE7D0;
-  --color-cream: #FAF7F2;
+  /* Warm Cream Background Family */
+  --color-cream-50: #FCFAF6;
+  --color-cream-100: #FAF7F2;
+  --color-cream-200: #F4EFE6;
+  --color-cream-300: #EAE3D5;
+  --color-cream: #FDFBF7;
 
-  --color-espresso-50: #4D362B;
-  --color-espresso-100: #3D2B22;
-  --color-espresso-200: #2E2019;
-  --color-espresso-300: #1F1511;
-  --color-espresso: #23150D;
+  /* Rich Espresso Accent Family */
+  --color-espresso-50: #56402E;
+  --color-espresso-100: #4B3523;
+  --color-espresso-200: #3A2616;
+  --color-espresso-300: #2C1E11;
+  --color-espresso: #2C1E11;
 
-  --color-sage-50: #F2F6F3;
-  --color-sage-100: #E4ECE7;
-  --color-sage-200: #C9D9CE;
-  --color-sage-300: #AEC6B5;
-  --color-sage-400: #8FB09A;
-  --color-sage-500: #73957F;
-  --color-sage-600: #5C7A68;
-  --color-sage-700: #475E50;
-  --color-sage: #607A66;
+  /* Sage Green Family */
+  --color-sage-50: #F1F5F2;
+  --color-sage-100: #E1EAE3;
+  --color-sage-200: #C4D6C9;
+  --color-sage-300: #A2BEAB;
+  --color-sage-400: #7DA288;
+  --color-sage-500: #5D8569;
+  --color-sage-600: #4B6B52;
+  --color-sage: #4A6B52;
 
+  /* Muted Charcoal for secondary text readability */
+  --color-charcoal: #4A4A4A;
+
+  /* Fonts */
   --font-sans: "Plus Jakarta Sans", sans-serif;
   --font-serif: "Playfair Display", serif;
   --font-outfit: "Outfit", sans-serif;
@@ -32,23 +38,23 @@
 
 @layer base {
   body {
-    @apply bg-cream text-espresso font-sans antialiased selection:bg-sage/20 selection:text-sage-700;
+    @apply bg-cream text-charcoal font-sans antialiased selection:bg-sage/10 selection:text-sage;
   }
 }
 
 /* Custom glassmorphism styling */
 .glassmorphism {
-  background: rgba(250, 247, 242, 0.85);
+  background: rgba(253, 251, 247, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(96, 122, 102, 0.1);
+  border: 1px solid rgba(74, 107, 82, 0.1);
 }
 
 .glassmorphism-dark {
-  background: rgba(35, 21, 13, 0.85);
+  background: rgba(44, 30, 17, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(250, 247, 242, 0.05);
+  border: 1px solid rgba(253, 251, 247, 0.05);
 }
 
 /* Custom scrollbar styling */
@@ -56,12 +62,12 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: #FDFBF7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C9D9CE;
+  background: #C4D6C9;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #AEC6B5;
+  background: #A2BEAB;
 }

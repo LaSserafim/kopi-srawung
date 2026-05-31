@@ -10,6 +10,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [cartItems, setCartItems] = useState([]);
   const [toastMessage, setToastMessage] = useState(null);
+  const [tableNumber, setTableNumber] = useState('1'); // Global table number state
 
   // Filter items based on selected category and search input
   const filteredItems = useMemo(() => {
@@ -78,14 +79,15 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-cream flex flex-col font-sans select-none selection:bg-sage/10 selection:text-sage-700">
+    <div className="min-h-screen bg-cream flex flex-col font-sans select-none selection:bg-sage/10 selection:text-sage">
       
       {/* Sticky Header Nav */}
-      <header className="sticky top-0 z-30 w-full bg-cream-50/80 backdrop-blur-md border-b border-sage/10 py-4 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+      <header className="sticky top-0 z-30 w-full bg-cream/80 backdrop-blur-md border-b border-sage/10 py-3.5 px-4 sm:px-6 lg:px-8 shadow-sm">
+        <div className="max-w-6xl mx-auto flex items-center justify-between gap-3">
+          
+          {/* Logo Brand */}
           <div className="flex items-center gap-2">
-            {/* Logo Icon */}
-            <span className="w-8 h-8 rounded-full bg-sage flex items-center justify-center text-cream-50 font-serif font-black text-sm">
+            <span className="w-8.5 h-8.5 rounded-full bg-sage flex items-center justify-center text-cream-50 font-serif font-black text-sm shadow-sm">
               S
             </span>
             <span className="font-serif text-lg font-bold tracking-tight text-espresso">
@@ -93,14 +95,31 @@ function App() {
             </span>
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="hidden sm:inline-block text-xs font-semibold text-espresso/60 bg-cream-200/50 px-3 py-1 rounded-full">
-              📍 Tembalang, Semarang
-            </span>
-            <span className="text-xs font-bold text-sage-600 bg-sage-50 px-3 py-1 rounded-full border border-sage/10">
-              🟢 Buka Sekarang
+          {/* Table Selector & Status Badges */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Table Selector Dropdown */}
+            <div className="flex items-center gap-1.5 bg-white border border-sage/20 rounded-full px-3 py-1.5 shadow-sm text-xs font-semibold text-espresso">
+              <span className="text-charcoal/70">Meja:</span>
+              <select
+                value={tableNumber}
+                onChange={(e) => setTableNumber(e.target.value)}
+                className="bg-transparent border-none focus:outline-none focus:ring-0 text-espresso font-bold cursor-pointer pr-1"
+                title="Pilih Nomor Meja Anda"
+              >
+                {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
+                  <option key={num} value={num}>
+                    {num}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Status Badge */}
+            <span className="text-[10px] sm:text-xs font-bold text-sage bg-sage-50 px-3 py-1.5 rounded-full border border-sage/10 whitespace-nowrap">
+              🟢 Buka (09:00 - 23:00)
             </span>
           </div>
+
         </div>
       </header>
 
@@ -127,6 +146,7 @@ function App() {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
           onAddToCart={handleAddToCart}
+          tableNumber={tableNumber}
         />
       </main>
 
@@ -136,6 +156,7 @@ function App() {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
         onClearCart={handleClearCart}
+        tableNumber={tableNumber}
       />
 
       {/* Footer Details Component */}
