@@ -15,7 +15,7 @@ export const menuData = [
     category: 'Coffee',
     price: 22000,
     description: 'Perpaduan unik double shot espresso bold dengan matcha premium jepang dan susu segar. Creamy, bittersweet, dan menyegarkan.',
-    image: 'https://images.unsplash.com/photo-1594911774802-8822a7079af1?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1550507992-eb93ffe0ab63?auto=format&fit=crop&q=80&w=600',
     tag: 'Rekomendasi'
   },
   {
@@ -69,11 +69,11 @@ export const menuData = [
   },
   {
     id: 'snack-2',
-    name: 'Platter Cireng Semarang',
+    name: 'Cireng',
     category: 'Snacks & Meals',
     price: 14000,
-    description: 'Cireng kenyal kriuk hangat disajikan dengan sambal rujak gula jawa super pedas manis khas Semarang. Isi melimpah untuk sharing.',
-    image: 'https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=600',
+    description: 'Cireng kenyal kriuk hangat disajikan dengan sambal rujak gula jawa super pedas manis. Sangat seru dimakan rame-rame!',
+    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=600',
     tag: 'Sharing Plate'
   },
   {
