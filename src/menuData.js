@@ -15,7 +15,7 @@ export const menuData = [
     category: 'Coffee',
     price: 22000,
     description: 'Perpaduan unik double shot espresso bold dengan matcha premium jepang dan susu segar. Creamy, bittersweet, dan menyegarkan.',
-    image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1594911774802-8822a7079af1?auto=format&fit=crop&q=80&w=600',
     tag: 'Rekomendasi'
   },
   {
@@ -24,7 +24,7 @@ export const menuData = [
     category: 'Coffee',
     price: 14000,
     description: 'Espresso Arabika robusta blend disiram air mineral berkualitas. Rasa bersih, aroma pekat, teman andalan begadang tugas.',
-    image: 'https://images.unsplash.com/photo-1510707513156-46c430e39a2f?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=600',
     tag: 'Strong Hit'
   },
 
@@ -35,7 +35,7 @@ export const menuData = [
     category: 'Non-Coffee',
     price: 18000,
     description: 'Earthy matcha Jepang premium yang diseduh lembut dengan susu hangat/es. Manis legit dan menenangkan hati.',
-    image: 'https://images.unsplash.com/photo-1594911774802-8822a7079af1?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=600',
     tag: 'Best Seller'
   },
   {
@@ -64,7 +64,7 @@ export const menuData = [
     category: 'Snacks & Meals',
     price: 15000,
     description: 'Pisang kepok manis digoreng tepung roti yang renyah di luar, disiram sirup gula aren legit dan taburan keju parut.',
-    image: 'https://images.unsplash.com/photo-1627916607164-7b20241db935?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1581798459219-318e76aecc7b?auto=format&fit=crop&q=80&w=600',
     tag: 'Best Seller'
   },
   {
@@ -73,7 +73,7 @@ export const menuData = [
     category: 'Snacks & Meals',
     price: 14000,
     description: 'Cireng kenyal kriuk hangat disajikan dengan sambal rujak gula jawa super pedas manis khas Semarang. Isi melimpah untuk sharing.',
-    image: 'https://images.unsplash.com/photo-1541696490-8744a5db022b?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=600',
     tag: 'Sharing Plate'
   },
   {
